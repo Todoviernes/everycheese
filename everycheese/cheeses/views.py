@@ -1,3 +1,4 @@
+from django.urls import reverse
 from django.shortcuts import render
 
 # Create your views here.
@@ -10,3 +11,8 @@ class CheeseListView(ListView):
     model = Cheese
     paginate_by = 30
     template_name = "cheeses/cheese_list.html"
+
+
+class CheeseDetailView(DetailView):
+    model = Cheese
+    template_name = "cheeses/cheese_detail.html"
