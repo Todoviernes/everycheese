@@ -19,6 +19,12 @@
           {{ object.name }}
         
       </h2>
+      {% if object.bio %}
+      <h3>Bio</h3>
+      <p>
+        {{object.bio | linebreaks}}
+      </p>
+      {% endif %}
     </div>
   </div>
   {% if object == request.user %}
